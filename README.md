@@ -8,6 +8,19 @@
 
 Rewrite [clsx](https://github.com/lukeed/clsx) in TypeScript.
 
+## Usage
+
+```sh
+ni -D ts-clsx
+```
+
+```ts
+import { clsx } from 'clsx'
+
+clsx('foo', [1 && 'bar', { baz: false, bat: null }, ['hello', ['world']]], 'cya')
+// => 'foo bar hello world cya'
+```
+
 <!-- Badges -->
 [npm-version-src]: https://img.shields.io/npm/v/ts-clsx?style=flat&colorA=080f12&colorB=1fa669
 [npm-version-href]: https://npmjs.com/package/ts-clsx
