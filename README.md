@@ -21,6 +21,23 @@ clsx('foo', [1 && 'bar', { baz: false, bat: null }, ['hello', ['world']]], 'cya'
 // => 'foo bar hello world cya'
 ```
 
+## Tailwind Support
+
+1. VS Code + Tailwind Intellisense Extension
+2. Add the following to your `settings.json`
+
+```json
+{
+  "tailwindCSS.experimental.classRegex": [
+    ["clsx\\(([^)]*)\\)", "(?:'|\"|`)([^']*)(?:'|\"|`)"]
+  ]
+}
+```
+
+## License
+
+[MIT](https://github.com/mancuoj/ts-clsx/blob/main/LICENSE) License © 2024-PRESENT [Mancuoj](https://github.com/mancuoj)
+
 <!-- Badges -->
 [npm-version-src]: https://img.shields.io/npm/v/ts-clsx?style=flat&colorA=080f12&colorB=1fa669
 [npm-version-href]: https://npmjs.com/package/ts-clsx
