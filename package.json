@@ -1,7 +1,7 @@
 {
   "name": "ts-clsx",
   "type": "module",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "packageManager": "pnpm@8.15.4",
   "description": "Rewrite clsx in TypeScript",
   "author": {
@@ -35,6 +35,16 @@
       "require": {
         "types": "./dist/index.d.cts",
         "default": "./dist/index.cjs"
+      }
+    },
+    "./lite": {
+      "import": {
+        "types": "./dist/lite/index.d.ts",
+        "default": "./dist/lite/index.js"
+      },
+      "require": {
+        "types": "./dist/lite/index.d.cts",
+        "default": "./dist/lite/index.cjs"
       }
     }
   },
