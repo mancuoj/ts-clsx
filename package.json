@@ -28,28 +28,18 @@
   "sideEffects": false,
   "exports": {
     ".": {
-      "import": {
-        "types": "./dist/index.d.ts",
-        "default": "./dist/index.js"
-      },
-      "require": {
-        "types": "./dist/index.d.cts",
-        "default": "./dist/index.cjs"
-      }
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.cjs"
     },
     "./lite": {
-      "import": {
-        "types": "./dist/lite/index.d.ts",
-        "default": "./dist/lite/index.js"
-      },
-      "require": {
-        "types": "./dist/lite/index.d.cts",
-        "default": "./dist/lite/index.cjs"
-      }
+      "types": "./dist/index.d.ts",
+      "import": "./dist/lite.mjs",
+      "require": "./dist/lite.cjs"
     }
   },
-  "main": "./dist/index.cjs",
-  "module": "./dist/index.js",
+  "main": "./dist/index.mjs",
+  "module": "./dist/index.mjs",
   "types": "./dist/index.d.ts",
   "typesVersions": {
     "*": {
@@ -63,10 +53,11 @@
     "dist"
   ],
   "scripts": {
-    "build": "bunchee",
-    "dev": "bunchee -w",
+    "build": "unbuild",
+    "dev": "unbuild --stub",
+    "start": "esno src/index.ts",
     "lint": "eslint .",
-    "test": "vitest run",
+    "test": "vitest",
     "check": "pnpm lint && pnpm test",
     "prepare": "simple-git-hooks",
     "prepublishOnly": "pnpm build && pnpm check",
@@ -76,12 +67,13 @@
     "@antfu/eslint-config": "^2.8.0",
     "@types/node": "^20.11.25",
     "bumpp": "^9.4.0",
-    "bunchee": "^4.4.8",
     "eslint": "^8.57.0",
+    "esno": "^4.0.0",
     "lint-staged": "^15.2.2",
     "rimraf": "^5.0.5",
     "simple-git-hooks": "^2.10.0",
-    "typescript": ">=4.7.4 <5.4.0",
+    "typescript": "^5.3.3",
+    "unbuild": "^2.0.0",
     "vitest": "^1.3.1"
   },
   "simple-git-hooks": {
