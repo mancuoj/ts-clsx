@@ -33,7 +33,7 @@
       "require": "./dist/index.cjs"
     },
     "./lite": {
-      "types": "./dist/index.d.ts",
+      "types": "./dist/lite.d.ts",
       "import": "./dist/lite.mjs",
       "require": "./dist/lite.cjs"
     }
