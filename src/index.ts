@@ -23,3 +23,5 @@ function toVal(input: ClassValue): string | number {
 export function clsx(...args: ClassValue[]): string {
   return args.map(toVal).filter(Boolean).join(' ')
 }
+
+export default clsx
