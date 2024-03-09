@@ -67,10 +67,9 @@
     "dev": "bunchee -w",
     "lint": "eslint .",
     "test": "vitest run",
-    "clean": "rimraf ./dist",
     "check": "pnpm lint && pnpm test",
     "prepare": "simple-git-hooks",
-    "prepublishOnly": "pnpm clean && pnpm build && pnpm check",
+    "prepublishOnly": "pnpm build && pnpm check",
     "release": "bumpp && pnpm publish"
   },
   "devDependencies": {
