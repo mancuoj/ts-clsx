@@ -2,6 +2,12 @@ import { describe, expect, it } from 'vitest'
 import { clsx } from '../src'
 
 describe('ported from origin clsx test', () => {
+  it('exports', () => {
+    expect(typeof clsx).toBe('function')
+    expect(typeof clsx()).toBe('string')
+    expect(clsx()).toBe('')
+  })
+
   it('strings', () => {
     expect(clsx('')).toBe('')
     expect(clsx('foo')).toBe('foo')
