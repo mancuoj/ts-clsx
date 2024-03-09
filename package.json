@@ -29,33 +29,33 @@
   "exports": {
     ".": {
       "import": {
-        "types": "./dist/index.d.ts",
-        "default": "./dist/index.js"
+        "types": "./dist/clsx.d.ts",
+        "default": "./dist/clsx.js"
       },
       "require": {
-        "types": "./dist/index.d.cts",
-        "default": "./dist/index.cjs"
+        "types": "./dist/clsx.d.cts",
+        "default": "./dist/clsx.cjs"
       }
     },
     "./lite": {
       "import": {
-        "types": "./dist/lite/index.d.ts",
-        "default": "./dist/lite/index.js"
+        "types": "./dist/clsx.d.ts",
+        "default": "./dist/lite.js"
       },
       "require": {
-        "types": "./dist/lite/index.d.cts",
-        "default": "./dist/lite/index.cjs"
+        "types": "./dist/clsx.d.cts",
+        "default": "./dist/lite.cjs"
       }
     }
   },
-  "main": "./dist/index.cjs",
-  "module": "./dist/index.js",
-  "types": "./dist/index.d.ts",
+  "main": "./dist/clsx.cjs",
+  "module": "./dist/clsx.js",
+  "types": "./dist/clsx.d.ts",
   "typesVersions": {
     "*": {
       "*": [
         "./dist/*",
-        "./dist/index.d.ts"
+        "./dist/clsx.d.ts"
       ]
     }
   },
