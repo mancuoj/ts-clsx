@@ -3,18 +3,10 @@
   "type": "module",
   "version": "1.1.0",
   "packageManager": "pnpm@8.15.4",
-  "description": "Rewrite clsx in TypeScript",
-  "author": {
-    "name": "mancuoj",
-    "url": "https://github.com/mancuoj"
-  },
+  "description": "Rewrite clsx in TypeScript.",
+  "author": "Mancuoj <mancuoj@gmail.com>",
   "license": "MIT",
-  "homepage": "https://github.com/mancuoj/ts-clsx#readme",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/mancuoj/ts-clsx.git"
-  },
-  "bugs": "https://github.com/mancuoj/ts-clsx/issues",
+  "repository": "mancuoj/ts-clsx",
   "keywords": [
     "ts",
     "clsx",
@@ -33,20 +25,18 @@
       "require": "./dist/index.cjs"
     }
   },
-  "main": "./dist/index.cjs",
+  "main": "dist/index.cjs",
   "module": "./dist/index.mjs",
-  "types": "./dist/index.d.ts",
+  "types": "dist/index.d.ts",
   "files": [
     "dist"
   ],
   "scripts": {
     "build": "unbuild",
-    "dev": "unbuild --stub",
-    "start": "esno src/index.ts",
     "lint": "eslint . && tsc",
-    "test": "vitest",
+    "test": "pnpm lint && vitest run",
     "prepare": "simple-git-hooks",
-    "prepublishOnly": "pnpm build",
+    "prepublishOnly": "pnpm test && pnpm build",
     "release": "bumpp && pnpm publish"
   },
   "devDependencies": {
@@ -54,7 +44,6 @@
     "@types/node": "^20.11.25",
     "bumpp": "^9.4.0",
     "eslint": "^8.57.0",
-    "esno": "^4.0.0",
     "lint-staged": "^15.2.2",
     "simple-git-hooks": "^2.10.0",
     "typescript": "^5.3.3",
