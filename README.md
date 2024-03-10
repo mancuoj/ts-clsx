@@ -6,11 +6,13 @@
 
 Rewrite [clsx](https://github.com/lukeed/clsx) in TypeScript.
 
-## Usage
+## Install
 
 ```shell
 ni ts-clsx
 ```
+
+## Usage
 
 ```ts
 import { clsx } from 'ts-clsx'
