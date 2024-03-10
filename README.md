@@ -9,7 +9,7 @@ Rewrite [clsx](https://github.com/lukeed/clsx) in TypeScript.
 ## Usage
 
 ```sh
-ni -D ts-clsx
+ni ts-clsx
 ```
 
 ```ts
