@@ -21,15 +21,6 @@ clsx('foo', [1 && 'bar', { baz: false, bat: null }, ['hello', ['world']]], 'cya'
 // => 'foo bar hello world cya'
 ```
 
-```ts
-// lite version accepts only string arguments
-// non-string arguments will be ignored
-import { clsx } from 'clsx/lite'
-
-clsx('hello', true && 'foo', false && 'bar', { baz: true })
-// => "hello foo"
-```
-
 ## Tailwind Support
 
 1. VS Code + Tailwind Intellisense Extension
