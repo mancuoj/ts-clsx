@@ -4,7 +4,10 @@
 [![npm downloads][npm-downloads-src]][npm-downloads-href]
 [![License][license-src]][license-href]
 
-Rewrite [clsx](https://github.com/lukeed/clsx) in TypeScript.
+Rewrite [clsx](https://github.com/lukeed/clsx) in TypeScript, but
+
+- No default export
+- No lite version
 
 ## Install
 
