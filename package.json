@@ -21,32 +21,21 @@
   "exports": {
     ".": {
       "import": "./dist/index.mjs",
-      "require": "./dist/index.cjs"
+      "require": "./dist/index.js"
     },
     "./lite": {
       "import": "./dist/lite.mjs",
-      "require": "./dist/lite.cjs"
+      "require": "./dist/lite.js"
     }
   },
-  "main": "./dist/index.cjs",
+  "main": "./dist/index.js",
   "module": "./dist/index.mjs",
-  "types": "./dist/index.d.ts",
-  "typesVersions": {
-    "*": {
-      "*": [
-        "./dist/index.d.ts"
-      ],
-      "lite": [
-        "./dist/lite.d.ts"
-      ]
-    }
-  },
   "files": [
     "dist"
   ],
   "scripts": {
-    "build": "unbuild",
-    "dev": "unbuild --stub",
+    "build": "tsup",
+    "dev": "tsup --watch",
     "lint": "eslint . && tsc",
     "test": "pnpm lint && vitest run",
     "prepare": "simple-git-hooks",
@@ -60,8 +49,8 @@
     "eslint": "^8.57.0",
     "lint-staged": "^15.2.2",
     "simple-git-hooks": "^2.11.0",
+    "tsup": "^8.0.2",
     "typescript": "^5.4.2",
-    "unbuild": "^2.0.0",
     "vitest": "^1.4.0"
   },
   "simple-git-hooks": {
