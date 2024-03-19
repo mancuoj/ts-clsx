@@ -1,7 +1,7 @@
 {
   "name": "ts-clsx",
   "type": "module",
-  "version": "2.1.4",
+  "version": "2.0.1-beta.14",
   "packageManager": "pnpm@8.15.5",
   "description": "Rewrite clsx in TypeScript.",
   "author": "Mancuoj <mancuoj@gmail.com>",
@@ -20,38 +20,24 @@
   "sideEffects": false,
   "exports": {
     ".": {
-      "import": {
-        "types": "./dist/index.d.ts",
-        "default": "./dist/index.js"
-      },
-      "require": {
-        "types": "./dist/index.d.cts",
-        "default": "./dist/index.cjs"
-      }
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.cjs"
     },
     "./lite": {
-      "import": {
-        "types": "./dist/lite.d.ts",
-        "default": "./dist/lite.js"
-      },
-      "require": {
-        "types": "./dist/lite.d.cts",
-        "default": "./dist/lite.cjs"
-      }
+      "types": "./dist/lite.d.ts",
+      "import": "./dist/lite.mjs",
+      "require": "./dist/lite.cjs"
     }
   },
-  "main": "./dist/index.cjs",
-  "module": "./dist/index.js",
+  "main": "./dist/index.mjs",
+  "module": "./dist/index.mjs",
   "types": "./dist/index.d.ts",
   "typesVersions": {
     "*": {
-      ".": [
-        "./dist/index.d.ts",
-        "./dist/index.d.cts"
-      ],
-      "lite": [
-        "./dist/lite.d.ts",
-        "./dist/lite.d.cts"
+      "*": [
+        "./dist/*",
+        "./dist/index.d.ts"
       ]
     }
   },
@@ -59,8 +45,8 @@
     "dist"
   ],
   "scripts": {
-    "build": "bunchee",
-    "dev": "bunchee -w",
+    "build": "unbuild",
+    "dev": "unbuild --stub",
     "lint": "eslint . && tsc --noEmit",
     "test": "pnpm lint && vitest run",
     "prepare": "simple-git-hooks",
@@ -71,11 +57,11 @@
     "@antfu/eslint-config": "^2.8.3",
     "@types/node": "^20.11.29",
     "bumpp": "^9.4.0",
-    "bunchee": "^4.4.8",
     "eslint": "^8.57.0",
     "lint-staged": "^15.2.2",
     "simple-git-hooks": "^2.11.0",
     "typescript": "^5.4.2",
+    "unbuild": "^2.0.0",
     "vitest": "^1.4.0"
   },
   "simple-git-hooks": {
