@@ -24,7 +24,9 @@ clsx('foo', [1 && 'bar', { baz: false, bat: null }, ['hello', ['world']]], 'cya'
 ```
 
 ```ts
-// lite version, accepts only string arguments
+// Lite version, accepts only string arguments
+import { clsx } from 'ts-clsx/lite'
+
 clsx('hello', true && 'foo', false && 'bar', { foo: true }, ['hello', ['world']])
 // => "hello foo"
 ```
