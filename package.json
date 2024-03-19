@@ -46,7 +46,7 @@
   ],
   "scripts": {
     "build": "unbuild",
-    "lint": "eslint . && tsc",
+    "lint": "eslint . && tsc --noEmit",
     "test": "pnpm lint && vitest run",
     "prepare": "simple-git-hooks",
     "prepublishOnly": "pnpm test && pnpm build",
