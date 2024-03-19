@@ -24,7 +24,7 @@ clsx('foo', [1 && 'bar', { baz: false, bat: null }, ['hello', ['world']]], 'cya'
 ```
 
 ```ts
-// lite version, only accept strings
+// lite version, accepts only string arguments
 clsx('hello', true && 'foo', false && 'bar', { foo: true }, ['hello', ['world']])
 // => "hello foo"
 ```
