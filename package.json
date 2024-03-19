@@ -20,14 +20,24 @@
   "sideEffects": false,
   "exports": {
     ".": {
-      "types": "./dist/index.d.ts",
-      "import": "./dist/index.mjs",
-      "require": "./dist/index.cjs"
+      "import": {
+        "types": "./dist/index.d.mts",
+        "default": "./dist/index.mjs"
+      },
+      "require": {
+        "types": "./dist/index.d.cts",
+        "default": "./dist/index.cjs"
+      }
     },
     "./lite": {
-      "types": "./dist/lite.d.ts",
-      "import": "./dist/lite.mjs",
-      "require": "./dist/lite.cjs"
+      "import": {
+        "types": "./dist/lite.d.mts",
+        "default": "./dist/lite.mjs"
+      },
+      "require": {
+        "types": "./dist/lite.d.cts",
+        "default": "./dist/lite.cjs"
+      }
     }
   },
   "main": "./dist/index.mjs",
