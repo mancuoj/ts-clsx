@@ -33,7 +33,7 @@
   "typesVersions": {
     "*": {
       ".": ["dist/index.d.ts"],
-      "./lite": ["dist/lite.d.ts"]
+      "lite": ["dist/lite.d.ts"]
     }
   },
   "files": [
