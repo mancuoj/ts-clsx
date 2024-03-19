@@ -20,21 +20,22 @@
   "sideEffects": false,
   "exports": {
     ".": {
-      "import": "./dist/index.js",
+      "import": "./dist/index.mjs",
       "require": "./dist/index.cjs"
     },
     "./lite": {
-      "import": "./dist/lite.js",
+      "import": "./dist/lite.mjs",
       "require": "./dist/lite.cjs"
     }
   },
-  "main": "./dist/index.cjs",
-  "module": "./dist/index.js",
+  "main": "./dist/index.mjs",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
   "typesVersions": {
     "*": {
       "*": [
-        "./dist/index.d.ts",
-        "./dist/*"
+        "./dist/*",
+        "./dist/index.d.ts"
       ]
     }
   },
@@ -42,8 +43,7 @@
     "dist"
   ],
   "scripts": {
-    "build": "tsup",
-    "dev": "tsup --watch",
+    "build": "unbuild",
     "lint": "eslint . && tsc",
     "test": "pnpm lint && vitest run",
     "prepare": "simple-git-hooks",
@@ -57,8 +57,8 @@
     "eslint": "^8.57.0",
     "lint-staged": "^15.2.2",
     "simple-git-hooks": "^2.11.0",
-    "tsup": "^8.0.2",
     "typescript": "^5.4.2",
+    "unbuild": "^2.0.0",
     "vitest": "^1.4.0"
   },
   "simple-git-hooks": {
