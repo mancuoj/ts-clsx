@@ -30,6 +30,12 @@
   },
   "main": "./dist/index.cjs",
   "module": "./dist/index.js",
+  "typesVersions": {
+    "*": {
+      ".": ["dist/index.d.ts"],
+      "./lite": ["dist/lite.d.ts"]
+    }
+  },
   "files": [
     "dist"
   ],
