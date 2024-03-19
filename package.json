@@ -32,11 +32,9 @@
   "module": "./dist/index.js",
   "typesVersions": {
     "*": {
-      ".": [
-        "dist/index.d.ts"
-      ],
-      "lite": [
-        "dist/lite.d.ts"
+      "*": [
+        "./dist/index.d.ts",
+        "./dist/*"
       ]
     }
   },
