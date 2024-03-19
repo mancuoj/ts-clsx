@@ -45,9 +45,13 @@
   "types": "./dist/index.d.ts",
   "typesVersions": {
     "*": {
-      "*": [
+      ".": [
         "./dist/*",
         "./dist/index.d.ts"
+      ],
+      "lite": [
+        "./dist/*",
+        "./dist/lite.d.ts"
       ]
     }
   },
