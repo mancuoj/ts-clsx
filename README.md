@@ -6,10 +6,7 @@
 [![JSDocs][jsdocs-src]][jsdocs-href]
 [![License][license-src]][license-href]
 
-Rewrite [clsx](https://github.com/lukeed/clsx) in TypeScript, but
-
-- No default export
-- No lite version
+Rewrite [clsx](https://github.com/lukeed/clsx) in TypeScript, but no default export.
 
 ## Install
 
@@ -24,6 +21,12 @@ import { clsx } from 'ts-clsx'
 
 clsx('foo', [1 && 'bar', { baz: false, bat: null }, ['hello', ['world']]], 'cya')
 // => 'foo bar hello world cya'
+```
+
+```ts
+// lite version, only accept strings
+clsx('hello', true && 'foo', false && 'bar', { foo: true }, ['hello', ['world']])
+// => "hello foo"
 ```
 
 ## Tailwind Support
