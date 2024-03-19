@@ -1,17 +1,14 @@
 {
   "compilerOptions": {
     "target": "ESNext",
-    "lib": ["es2022"],
-    "moduleDetection": "force",
+    "lib": ["ESNext"],
     "module": "ESNext",
     "moduleResolution": "Bundler",
     "resolveJsonModule": true,
-    "allowJs": true,
     "strict": true,
-    "noEmit": true,
+    "strictNullChecks": true,
     "esModuleInterop": true,
-    "isolatedModules": true,
+    "skipDefaultLibCheck": true,
     "skipLibCheck": true
-  },
-  "include": ["src"]
+  }
 }
