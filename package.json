@@ -46,6 +46,7 @@
   ],
   "scripts": {
     "build": "unbuild",
+    "dev": "unbuild --stub",
     "lint": "eslint . && tsc",
     "test": "pnpm lint && vitest run",
     "prepare": "simple-git-hooks",
