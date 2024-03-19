@@ -21,11 +21,11 @@
   "exports": {
     ".": {
       "import": "./dist/index.mjs",
-      "require": "./dist/index.js"
+      "require": "./dist/index.cjs"
     },
     "./lite": {
       "import": "./dist/lite.mjs",
-      "require": "./dist/lite.js"
+      "require": "./dist/lite.cjs"
     }
   },
   "main": "./dist/index.cjs",
