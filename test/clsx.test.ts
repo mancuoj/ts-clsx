@@ -3,8 +3,8 @@ import { clsx } from '../src'
 
 describe('ported from origin clsx test', () => {
   it('exports', () => {
-    expect(typeof clsx).toBe('function')
-    expect(typeof clsx()).toBe('string')
+    expect(clsx).toBeTypeOf('function')
+    expect(clsx()).toBeTypeOf('string')
     expect(clsx()).toBe('')
   })
 

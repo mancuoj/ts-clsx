@@ -22,6 +22,10 @@
     ".": {
       "import": "./dist/index.mjs",
       "require": "./dist/index.cjs"
+    },
+    "./lite": {
+      "import": "./dist/lite.mjs",
+      "require": "./dist/lite.cjs"
     }
   },
   "main": "./dist/index.cjs",
@@ -29,7 +33,8 @@
   "types": "./dist/index.d.ts",
   "typesVersions": {
     "*": {
-      "*": ["./dist/*", "./dist/index.d.ts"]
+      ".": ["./dist/index.d.ts"],
+      "lite": ["./dist/lite.d.ts"]
     }
   },
   "files": ["dist"],
@@ -43,7 +48,7 @@
   },
   "devDependencies": {
     "@antfu/eslint-config": "^2.8.3",
-    "@types/node": "^20.11.28",
+    "@types/node": "^20.11.29",
     "bumpp": "^9.4.0",
     "eslint": "^8.57.0",
     "lint-staged": "^15.2.2",
