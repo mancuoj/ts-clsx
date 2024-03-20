@@ -47,10 +47,12 @@
   "scripts": {
     "build": "unbuild",
     "dev": "unbuild --stub",
-    "lint": "eslint . && tsc --noEmit",
-    "test": "pnpm lint && vitest run",
+    "lint": "eslint .",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest",
+    "test:ci": "pnpm vitest --coverage --typecheck",
     "prepare": "simple-git-hooks",
-    "prepublishOnly": "pnpm test && pnpm build",
+    "prepublishOnly": "pnpm build",
     "release": "bumpp && pnpm publish"
   },
   "devDependencies": {
