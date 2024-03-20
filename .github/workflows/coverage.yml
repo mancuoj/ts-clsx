@@ -22,4 +22,7 @@ jobs:
       - run: pnpm lint
       - run: pnpm build
       - run: pnpm vitest --coverage --typecheck
-      - uses: codecov/codecov-action@v4
+      - uses: codecov/codecov-action@v4.0.1
+        with:
+          token: ${{ secrets.CODECOV_TOKEN }}
+          slug: mancuoj/ts-clsx
