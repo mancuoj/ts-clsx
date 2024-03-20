@@ -30,7 +30,7 @@
       "require": "./dist/lite.cjs"
     }
   },
-  "main": "./dist/index.mjs",
+  "main": "./dist/index.cjs",
   "module": "./dist/index.mjs",
   "types": "./dist/index.d.ts",
   "typesVersions": {
@@ -56,6 +56,7 @@
   "devDependencies": {
     "@antfu/eslint-config": "^2.8.3",
     "@types/node": "^20.11.29",
+    "@vitest/coverage-v8": "^1.4.0",
     "bumpp": "^9.4.0",
     "eslint": "^8.57.0",
     "lint-staged": "^15.2.2",
