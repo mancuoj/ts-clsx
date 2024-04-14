@@ -2,7 +2,7 @@
   "name": "ts-clsx",
   "type": "module",
   "version": "2.4.0",
-  "packageManager": "pnpm@8.15.6",
+  "packageManager": "pnpm@8.15.7",
   "description": "Rewrite clsx in TypeScript.",
   "author": "Mancuoj <mancuoj@gmail.com>",
   "license": "MIT",
@@ -20,19 +20,29 @@
   "sideEffects": false,
   "exports": {
     ".": {
-      "types": "./dist/index.d.ts",
-      "import": "./dist/index.mjs",
-      "require": "./dist/index.cjs"
+      "import": {
+        "types": "./dist/es/index.d.ts",
+        "default": "./dist/es/index.js"
+      },
+      "require": {
+        "types": "./dist/cjs/index.d.cts",
+        "default": "./dist/cjs/index.cjs"
+      }
     },
     "./lite": {
-      "types": "./dist/lite.d.ts",
-      "import": "./dist/lite.mjs",
-      "require": "./dist/lite.cjs"
+      "import": {
+        "types": "./dist/es/lite.d.ts",
+        "default": "./dist/es/lite.js"
+      },
+      "require": {
+        "types": "./dist/cjs/lite.d.cts",
+        "default": "./dist/cjs/lite.cjs"
+      }
     }
   },
-  "main": "./dist/index.cjs",
-  "module": "./dist/index.mjs",
-  "types": "./dist/index.d.ts",
+  "main": "./dist/cjs/index.cjs",
+  "module": "./dist/es/index.js",
+  "types": "./dist/es/index.d.ts",
   "typesVersions": {
     "*": {
       "*": [
@@ -41,12 +51,10 @@
       ]
     }
   },
-  "files": [
-    "dist"
-  ],
+  "files": ["dist"],
   "scripts": {
-    "build": "unbuild",
-    "dev": "unbuild --stub",
+    "build": "bunchee",
+    "dev": "bunchee -w",
     "lint": "eslint .",
     "typecheck": "tsc --noEmit",
     "test": "vitest",
@@ -56,16 +64,16 @@
     "release": "bumpp && pnpm publish"
   },
   "devDependencies": {
-    "@antfu/eslint-config": "^2.12.2",
-    "@types/node": "^20.12.5",
-    "@vitest/coverage-v8": "^1.4.0",
+    "@antfu/eslint-config": "^2.13.3",
+    "@types/node": "^20.12.7",
+    "@vitest/coverage-v8": "^1.5.0",
     "bumpp": "^9.4.0",
+    "bunchee": "^5.1.2",
     "eslint": "^9.0.0",
     "lint-staged": "^15.2.2",
     "simple-git-hooks": "^2.11.1",
-    "typescript": "^5.4.4",
-    "unbuild": "^2.0.0",
-    "vitest": "^1.4.0"
+    "typescript": "^5.4.5",
+    "vitest": "^1.5.0"
   },
   "simple-git-hooks": {
     "pre-commit": "pnpm lint-staged"
